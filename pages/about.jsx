@@ -33,7 +33,7 @@ export default function About() {
     },
     {
       ques: "Email",
-      ans: "+abdullahayman40474@gmail.com",
+      ans: "abdullahayman40474@gmail.com",
     },
   ];
 
