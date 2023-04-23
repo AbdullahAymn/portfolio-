@@ -57,7 +57,7 @@ export default function Portfolio() {
   ));
   return (
     <div className="w-full min-h-screen flex flex-col items-center justify-start p-4 ">
-      <div className=" flex items-center h-20">
+      <div className=" mt-10 md:mt-0 flex items-center h-20">
         <hr
           className={` border-none tra w-8 h-1 rounded-full ${
             isDark ? "bg-white" : "bg-neutral-800"

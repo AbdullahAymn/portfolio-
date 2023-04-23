@@ -68,14 +68,14 @@ export default function Contact() {
   ));
   return (
     <div className=" min-h-screen flex flex-col items-center justify-start space-y-8">
-      <div className=" flex items-center h-20">
+      <div className=" mt-10 md:mt-0 flex items-center h-20">
         <hr
           className={` border-none tra w-8 h-1 rounded-full ${
             isDark ? "bg-white" : "bg-neutral-800"
           } `}
         />
         <h1
-          className={` text-3xl font-sans font-bold p-4 tra ${
+          className={ ` text-2xl md:text-3xl font-sans font-bold p-4 tra ${
             isDark ? "text-white" : "text-neutral-800"
           }`}
         >
@@ -89,7 +89,7 @@ export default function Contact() {
       </div>
 
       <div
-        className={` py-28 flex flex-col space-y-4 tra text-xl  ${
+        className={` py-28 flex flex-col space-y-4 tra text-md md:text-xl  ${
           isDark ? "text-white" : "text-neutral-800"
         }`}
       >

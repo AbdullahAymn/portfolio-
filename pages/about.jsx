@@ -64,14 +64,14 @@ export default function About() {
   ));
   return (
     <div className=" w-full min-h-screen flex flex-col items-center space-y-8 justify-start ">
-      <div className=" flex items-center h-20">
+      <div className=" mt-10 md:mt-0 flex items-center h-20">
         <hr
           className={` border-none tra rounded-full w-8 h-1 ${
             isDark ? "bg-white" : "bg-neutral-800"
           } `}
         />
         <h1
-          className={` text-3xl font-sans font-bold p-4 tra ${
+          className={`   text-3xl font-sans font-bold p-4 tra ${
             isDark ? "text-white" : "text-neutral-800"
           }`}
         >
