@@ -34,6 +34,10 @@ export default function Contact() {
       ico: "fa-brands fa-linkedin",
     },
     {
+      link: "https://www.upwork.com/freelancers/~016077afb8a931b33b",
+      txt :'upWork'
+    },
+    {
       link: "https://wa.me/201015737609",
       ico: "fa-brands fa-whatsapp",
     },
@@ -41,10 +45,10 @@ export default function Contact() {
       link: "https://t.me/Abdullah_Ayman",
       ico: "fa-brands fa-telegram",
     },
-    {
-      link: "https://twitter.com/Aybbekk",
-      ico: "fa-brands fa-twitter",
-    },
+    // {
+    //   link: "https://twitter.com/Aybbekk",
+    //   ico: "fa-brands fa-twitter",
+    // },
     {
       link: "https://www.facebook.com/Abdullah.Ayman.Yehya/",
       ico: "fa-brands fa-facebook",
@@ -63,7 +67,11 @@ export default function Contact() {
           : "shadow-neutral-800 border-neutral-800 text-neutral-800"
       } tra`}
     >
-      <i className={e.ico}></i>
+      {e.ico && <i className={e.ico}></i>}
+      {e.txt && <h1 className="text-sm mt-2
+      ">
+      {e.txt}
+    </h1>}
     </a>
   ));
   return (

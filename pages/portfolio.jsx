@@ -8,16 +8,23 @@ export default function Portfolio() {
   // projects
   const projects = [
     {
+      link: "https://e-app-indol.vercel.app",
+      img: "./eapp.PNG",
+      name: "E-commerce App",
+      used: "React & Next & Tailwind",
+    },
+    {
       link: "https://twitter-five-roan.vercel.app",
       img: "./twitter.PNG",
       name: "Twitter Clone",
       used: "React & Next & Tailwind",
     },
+    
     {
-      link: "https://e-app-indol.vercel.app",
-      img: "./eapp.PNG",
-      name: "E-commerce App",
-      used: "React & Next & Tailwind",
+      link: "https://react-3rd.vercel.app/",
+      img: "./2nd.PNG",
+      name: "React App",
+      used: "React",
     },
     {
       link: "https://react-second-project-five.vercel.app",
@@ -25,12 +32,7 @@ export default function Portfolio() {
       name: "Services App",
       used: "React",
     },
-    {
-      link: "https://react-3rd.vercel.app/",
-      img: "./2nd.PNG",
-      name: "React App",
-      used: "React",
-    },
+    
   ];
 
   const showProjects = projects.map((e, index) => (
