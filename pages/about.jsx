@@ -49,7 +49,7 @@ export default function About() {
 
   //Skills
 
-  const skills = [ "HTML", "CSS", "JavaScript", "ReactJs", "NextJs", "Tailwind"];
+  const skills = [ "HTML", "CSS", "JavaScript", "ReactJs", "NextJs","Scss", "Tailwind"];
   const ShowSkills = skills.map((e, index) => (
     <h1
       key={index}
