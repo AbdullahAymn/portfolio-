@@ -298,25 +298,6 @@ export default function NavBar() {
                     perspective: isActive ? "1000px" : "none",
                   }}
                 >
-                  {/* Mobile Glass Background - 3D effect when active */}
-                  <div
-                    className={`absolute inset-0 rounded-xl transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] group-hover:scale-[1.02] group-hover:translate-y-[-1px] ${
-                      isActive
-                        ? "bg-white/50 dark:bg-gray-800/50 backdrop-blur-xl border border-white/40 dark:border-gray-600/40 shadow-2xl shadow-black/10 dark:shadow-black/30"
-                        : "bg-white/30 dark:bg-gray-800/30 backdrop-blur-lg border border-white/25 dark:border-gray-700/30 shadow-xl shadow-black/8 dark:shadow-black/20 opacity-0 group-hover:opacity-100"
-                    }`}
-                    style={{
-                      background: isActive
-                        ? "linear-gradient(135deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3))"
-                        : "linear-gradient(135deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.15))",
-                      transform: isActive
-                        ? "perspective(1000px) rotateX(5deg) translateZ(10px)"
-                        : "none",
-                      boxShadow: isActive
-                        ? "0 10px 30px rgba(59, 130, 246, 0.3), 0 5px 15px rgba(147, 51, 234, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.5)"
-                        : "none",
-                    }}
-                  />
                   {/* Dark mode mobile glass with 3D */}
                   <div
                     className={`absolute inset-0 rounded-xl transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] hidden dark:block group-hover:scale-[1.02] group-hover:translate-y-[-1px] ${
@@ -360,10 +341,32 @@ export default function NavBar() {
                         "linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, transparent 50%)",
                     }}
                   />
+                  {/* Bouncing 3D small white circle at center for active state */}
+                  {isActive && (
+                    <span
+                      className="absolute left-1/2 -bottom-[8px] z-20"
+                      style={{
+                        transform:
+                          "translate(-50%,-50%) perspective(500px) translateZ(16px)",
+                      }}
+                    >
+                      <span
+                        className="block rounded-full"
+                        style={{
+                          width: "12px",
+                          height: "12px",
+                          background:
+                            "radial-gradient(circle at 30% 20%, #fff 80%, #e0e0e0 100%)",
+                          boxShadow:
+                            "0 0 12px 4px rgba(255,255,255,0.6), 0 6px 18px 2px rgba(60,40,100,0.18)",
+                        }}
+                      />
+                    </span>
+                  )}
                   <span
                     className={`relative z-10 transition-all duration-500 group-hover:scale-105 ${
                       isActive
-                        ? "bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent"
+                        ? "bg-gradient-to-r from-green-400  to-green-600 bg-clip-text text-transparent"
                         : ""
                     }`}
                     style={{
