@@ -16,7 +16,7 @@ export default function ScrollToTop() {
       setScrollProgress(scrollPercent);
 
       // Show button when page is scrolled down 300px
-      if (scrollTop > 100) {
+      if (scrollTop > 80) {
         setIsVisible(true);
       } else {
         setIsVisible(false);

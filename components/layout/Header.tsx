@@ -54,7 +54,7 @@ export default function NavBar() {
   ];
 
   return (
-    <header className={`w-full p-2 sticky top-2 `}>
+    <header className={`w-full p-2 sticky top-2 z-[9999] `}>
       <nav className="rounded-2xl shadow-md shadow-gray-800 backdrop-blur-sm bg-white/20 dark:bg-black/20 border-[3px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex items-center justify-between gap-4 py-4">
           {/* LOGO */}

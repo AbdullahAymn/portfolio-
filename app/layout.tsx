@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import CustomCursor from "./components/CustomCursor";
-import ScrollToTop from "./components/ScrollToTop";
-import Footer from "./components/layout/Footer";
-import NavBar from "./components/layout/Header";
-import Particles from "./components/Particles/Particles";
+import CustomCursor from "@/components/CustomCursor";
+import ScrollToTop from "@/components/ScrollToTop";
+import Footer from "@/components/layout/Footer";
+import NavBar from "@/components/layout/Header";
+import Particles from "@/components/Particles/Particles";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

@@ -172,3 +172,77 @@ body {
 .animate-pulse-delay {
   animation: pulse-delay 2s cubic-bezier(0.4, 0, 0.6, 1) 0.3s infinite;
 }
+
+/* Card shimmer and stripe animations */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes stripeMove {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 20px 20px;
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 3s infinite;
+}
+
+.animate-stripe {
+  animation: stripeMove 2s linear infinite;
+}
+
+@keyframes borderShine {
+  0% {
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(192, 172, 172, 0.3),
+      inset 0 0 10px rgba(192, 172, 172, 0.1);
+  }
+  25% {
+    border-color: rgba(192, 172, 172, 0.6);
+    box-shadow: 0 0 20px rgba(192, 172, 172, 0.5),
+      inset 0 0 15px rgba(192, 172, 172, 0.2);
+  }
+  50% {
+    border-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.4),
+      inset 0 0 20px rgba(255, 255, 255, 0.2);
+  }
+  75% {
+    border-color: rgba(192, 172, 172, 0.6);
+    box-shadow: 0 0 20px rgba(192, 172, 172, 0.5),
+      inset 0 0 15px rgba(192, 172, 172, 0.2);
+  }
+  100% {
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(192, 172, 172, 0.3),
+      inset 0 0 10px rgba(192, 172, 172, 0.1);
+  }
+}
+
+.animate-border-shine {
+  animation: borderShine 4s ease-in-out infinite;
+}
+
+@keyframes gradient {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 3s ease infinite;
+}
