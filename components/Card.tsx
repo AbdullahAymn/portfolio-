@@ -9,9 +9,9 @@ export default function Card({
 }) {
   return (
     <div
-      className="group relative p-8 lg:p-12 border-2 mx-auto rounded-2xl shadow-md shadow-[#c0acacd3] 
-                 backdrop-blur-md bg-white/10 dark:bg-black/10 my-6 overflow-hidden
-                 transition-all duration-300 ease-in-out hover:scale-[1.01] hover:shadow-xl 
+      className="group relative p-8 lg:p-12 border-2 mx-auto rounded-2xl shadow-sm shadow-[#c0acacd3] 
+                 backdrop-blur-[4px] bg-white/10 dark:bg-black/10 my-6 overflow-hidden
+                 transition-all duration-300 ease-in-out  hover:shadow-xl 
                  hover:shadow-[#c0acacd3]/50 dark:hover:shadow-[#c0acacd3]/30
                  animate-border-shine"
       style={{ width }}

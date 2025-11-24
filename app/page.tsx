@@ -1,7 +1,7 @@
 import Card from "@/components/Card";
 import Image from "next/image";
 import profile from "@/assets/images/abdullah.webp";
-import Link from "next/link";
+import Hire from "@/components/Hire";
 
 export default function Home() {
   return (
@@ -66,53 +66,7 @@ export default function Home() {
               projects.
             </p>
 
-            <div
-              style={{ justifyContent: "center" }}
-              className="flex flex-wrap justify-center gap-4 mb-8"
-            >
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 active:scale-95 transition-all duration-200 text-white font-semibold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl hover:shadow-indigo-500/50"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-                  />
-                </svg>
-                Let&apos;s talk
-              </Link>
-
-              <a
-                href="/Abdullah-Ayman-Resume.pdf"
-                className="inline-flex items-center gap-2 border-2 border-gray-300 dark:border-gray-600 hover:border-indigo-500 dark:hover:border-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-950/30 px-6 py-3 rounded-xl text-sm font-medium transition-all duration-200"
-                download
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                  />
-                </svg>
-                Download CV
-              </a>
-            </div>
+            <Hire />
           </div>
         </div>
       </Card>

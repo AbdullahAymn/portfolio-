@@ -197,7 +197,7 @@ body {
 }
 
 .animate-stripe {
-  animation: stripeMove 2s linear infinite;
+  animation: stripeMove 9s linear infinite;
 }
 
 @keyframes borderShine {
@@ -238,11 +238,28 @@ body {
     background-position: 0% 50%;
   }
   50% {
-    background-position: 100% 50%;
+    background-position: 50% 50%;
   }
 }
 
 .animate-gradient {
   background-size: 200% 200%;
   animation: gradient 3s ease infinite;
+}
+
+/* Lighting effects for icon list */
+@keyframes lightSweep {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(300%);
+  }
+}
+
+.animate-light-sweep {
+  animation: lightSweep 3s ease-in-out infinite;
 }
