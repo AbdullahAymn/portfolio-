@@ -2,6 +2,7 @@ import Card from "@/components/Card";
 import Image from "next/image";
 import profile from "@/assets/images/abdullah.webp";
 import Hire from "@/components/Hire";
+import ContactForm from "@/components/ContactForm";
 
 export default function Home() {
   return (
@@ -108,6 +109,9 @@ export default function Home() {
           ))}
         </ul>
       </Card>
+
+      {/* CONTACT ME */}
+      <ContactForm />
     </div>
   );
 }

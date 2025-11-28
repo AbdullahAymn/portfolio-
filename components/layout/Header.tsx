@@ -29,7 +29,7 @@ export default function NavBar() {
   const LINKS = [
     { link: "/", name: "Home" },
     { link: "/about", name: "About" },
-    { link: "/services", name: "Services" },
+    // { link: "/services", name: "Services" },
     { link: "/portfolio", name: "Portfolio" },
     { link: "/contact", name: "Contact" },
   ];
