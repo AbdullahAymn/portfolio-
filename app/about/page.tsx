@@ -1,8 +1,9 @@
 import Hire from "@/components/Hire";
 import IconComponents from "@/components/IconComponents";
 import { Sparkle } from "lucide-react";
+import WorkJourney from "./WorkJourney";
 
-export default function page() {
+export default function AboutPage() {
   // Feature cards data
   const featureCards = [
     {
@@ -143,7 +144,7 @@ export default function page() {
         </section>
       </div>
 
-      <h1 className="text-center text-4xl my-12 font-bold">Work Journey</h1>
+      <WorkJourney />
     </div>
   );
 }

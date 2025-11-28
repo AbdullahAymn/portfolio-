@@ -263,3 +263,146 @@ body {
 .animate-light-sweep {
   animation: lightSweep 3s ease-in-out infinite;
 }
+
+/* Journey Items - 3D Road Effect */
+.journey-road-container {
+  position: relative;
+  min-height: 100vh;
+  padding: 2rem 0;
+  overflow: hidden;
+}
+
+.journey-item-3d {
+  position: relative;
+  margin-bottom: 1rem;
+  transform-origin: center center;
+  will-change: transform, opacity;
+}
+
+/* Road perspective lines effect */
+.journey-road-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(41, 216, 154, 0.8) 0%,
+    rgba(34, 99, 87, 0.6) 50%,
+    rgba(41, 216, 154, 0.4) 100%
+  );
+  box-shadow: 0 0 20px rgba(41, 216, 154, 0.5), 0 0 40px rgba(41, 216, 154, 0.3);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Road vanishing point effect */
+.journey-road-container::after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  left: 50%;
+  transform: translateX(-50%) perspective(1000px) rotateX(60deg);
+  width: 200%;
+  height: 200%;
+  background: repeating-linear-gradient(
+      90deg,
+      transparent 0,
+      transparent 48%,
+      rgba(41, 216, 154, 0.1) 49%,
+      rgba(41, 216, 154, 0.1) 51%,
+      transparent 52%
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent 0,
+      transparent 98%,
+      rgba(41, 216, 154, 0.05) 99%,
+      rgba(41, 216, 154, 0.05) 100%
+    );
+  transform-origin: center bottom;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+/* Mobile adjustments */
+@media (width < 750px) {
+  .journey-item-3d {
+    flex-direction: row;
+  }
+  .journey-item-3d .info {
+    align-items: flex-start !important;
+  }
+
+  /* Move road line to left side on mobile (where stepper is) */
+  .journey-road-container::before {
+    left: 2rem;
+    transform: translateX(0);
+    width: 3px;
+    box-shadow: 0 0 15px rgba(41, 216, 154, 0.4),
+      0 0 30px rgba(41, 216, 154, 0.2);
+  }
+
+  /* Adjust vanishing point effect for mobile */
+  .journey-road-container::after {
+    left: 2rem;
+    transform: translateX(0) perspective(600px) rotateX(45deg);
+    width: 150%;
+    height: 150%;
+    opacity: 0.2;
+  }
+
+  /* Reduce 3D effect intensity on mobile */
+  .journey-item-3d {
+    transform-style: preserve-3d;
+  }
+}
+
+@media (width >= 750px) {
+  .journey-item-3d:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+  .journey-item-3d:nth-child(even) .info {
+    align-items: flex-end !important;
+  }
+}
+
+.journey-item-3d:last-child .stepper {
+  display: none;
+}
+
+/* Enhanced 3D glow effect for items */
+.journey-item-3d .info {
+  position: relative;
+  z-index: 1;
+  transition: filter 0.3s ease;
+}
+
+.journey-item-3d:hover .info {
+  filter: drop-shadow(0 0 20px rgba(41, 216, 154, 0.3));
+}
+
+/* Smooth scroll-based animations */
+@keyframes roadMove {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100px);
+  }
+}
+
+/* Add depth to stepper bar */
+.journey-item-3d .stepper {
+  transform: translateZ(0);
+  transition: box-shadow 0.3s ease;
+}
+
+.journey-item-3d:hover .stepper {
+  box-shadow: 0 0 15px #29d89a99, 0 2px 12px #29d89a55,
+    0 0 30px rgba(41, 216, 154, 0.4) !important;
+}
