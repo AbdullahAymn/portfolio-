@@ -1,0 +1,408 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Apply custom scrollbar to html element */
+  scrollbar-width: thin;
+  scrollbar-color: oklch(0.35 0 0) transparent;
+}
+
+body {
+  cursor: none; /* Hide default cursor */
+}
+
+/* Custom Cursor Styles */
+.custom-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--foreground);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease, border-width 0.2s ease;
+  z-index: 9999;
+  mix-blend-mode: difference;
+}
+
+.custom-cursor.cursor-hover {
+  width: 40px;
+  height: 40px;
+  border-width: 1px;
+}
+
+/* Hide cursor on touch devices */
+@media (hover: none) {
+  body {
+    cursor: auto;
+  }
+
+  .custom-cursor {
+    display: none;
+  }
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+/* Custom Scrollbar Styles - Small and Dark Mode */
+/* Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: oklch(0.35 0 0);
+  border-radius: 3px;
+  transition: background 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(0.5 0 0);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: oklch(0.35 0 0) transparent;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom animations for 404 page */
+@keyframes pulse-delay {
+  0%,
+  100% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.animate-pulse-delay {
+  animation: pulse-delay 2s cubic-bezier(0.4, 0, 0.6, 1) 0.3s infinite;
+}
+
+/* Card shimmer and stripe animations */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes stripeMove {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 20px 20px;
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 3s infinite;
+}
+
+.animate-stripe {
+  animation: stripeMove 9s linear infinite;
+}
+
+@keyframes borderShine {
+  0% {
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(192, 172, 172, 0.3),
+      inset 0 0 10px rgba(192, 172, 172, 0.1);
+  }
+  25% {
+    border-color: rgba(192, 172, 172, 0.6);
+    box-shadow: 0 0 20px rgba(192, 172, 172, 0.5),
+      inset 0 0 15px rgba(192, 172, 172, 0.2);
+  }
+  50% {
+    border-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.4),
+      inset 0 0 20px rgba(255, 255, 255, 0.2);
+  }
+  75% {
+    border-color: rgba(192, 172, 172, 0.6);
+    box-shadow: 0 0 20px rgba(192, 172, 172, 0.5),
+      inset 0 0 15px rgba(192, 172, 172, 0.2);
+  }
+  100% {
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(192, 172, 172, 0.3),
+      inset 0 0 10px rgba(192, 172, 172, 0.1);
+  }
+}
+
+.animate-border-shine {
+  animation: borderShine 4s ease-in-out infinite;
+}
+
+@keyframes gradient {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 3s ease infinite;
+}
+
+/* Lighting effects for icon list */
+@keyframes lightSweep {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(300%);
+  }
+}
+
+.animate-light-sweep {
+  animation: lightSweep 3s ease-in-out infinite;
+}
+
+/* Journey Items - 3D Road Effect */
+.journey-road-container {
+  position: relative;
+  min-height: 100vh;
+  padding: 2rem 0;
+  overflow: hidden;
+}
+
+.journey-item-3d {
+  position: relative;
+  margin-bottom: 1rem;
+  transform-origin: center center;
+  will-change: transform, opacity;
+}
+
+/* Road perspective lines effect */
+.journey-road-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(41, 216, 154, 0.8) 0%,
+    rgba(34, 99, 87, 0.6) 50%,
+    rgba(41, 216, 154, 0.4) 100%
+  );
+  box-shadow: 0 0 20px rgba(41, 216, 154, 0.5), 0 0 40px rgba(41, 216, 154, 0.3);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Road vanishing point effect */
+.journey-road-container::after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  left: 50%;
+  transform: translateX(-50%) perspective(1000px) rotateX(60deg);
+  width: 200%;
+  height: 200%;
+  background: repeating-linear-gradient(
+      90deg,
+      transparent 0,
+      transparent 48%,
+      rgba(41, 216, 154, 0.1) 49%,
+      rgba(41, 216, 154, 0.1) 51%,
+      transparent 52%
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent 0,
+      transparent 98%,
+      rgba(41, 216, 154, 0.05) 99%,
+      rgba(41, 216, 154, 0.05) 100%
+    );
+  transform-origin: center bottom;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+/* Mobile adjustments */
+@media (width < 750px) {
+  .journey-item-3d {
+    flex-direction: row;
+  }
+  .journey-item-3d .info {
+    align-items: flex-start !important;
+  }
+
+  /* Move road line to left side on mobile (where stepper is) */
+  .journey-road-container::before {
+    left: 2rem;
+    transform: translateX(0);
+    width: 3px;
+    box-shadow: 0 0 15px rgba(41, 216, 154, 0.4),
+      0 0 30px rgba(41, 216, 154, 0.2);
+  }
+
+  /* Adjust vanishing point effect for mobile */
+  .journey-road-container::after {
+    left: 2rem;
+    transform: translateX(0) perspective(600px) rotateX(45deg);
+    width: 150%;
+    height: 150%;
+    opacity: 0.2;
+  }
+
+  /* Reduce 3D effect intensity on mobile */
+  .journey-item-3d {
+    transform-style: preserve-3d;
+  }
+}
+
+@media (width >= 750px) {
+  .journey-item-3d:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+  .journey-item-3d:nth-child(even) .info {
+    align-items: flex-end !important;
+  }
+}
+
+.journey-item-3d:last-child .stepper {
+  display: none;
+}
+
+/* Enhanced 3D glow effect for items */
+.journey-item-3d .info {
+  position: relative;
+  z-index: 1;
+  transition: filter 0.3s ease;
+}
+
+.journey-item-3d:hover .info {
+  filter: drop-shadow(0 0 20px rgba(41, 216, 154, 0.3));
+}
+
+/* Smooth scroll-based animations */
+@keyframes roadMove {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100px);
+  }
+}
+
+/* Add depth to stepper bar */
+.journey-item-3d .stepper {
+  transform: translateZ(0);
+  transition: box-shadow 0.3s ease;
+}
+
+.journey-item-3d:hover .stepper {
+  box-shadow: 0 0 15px #29d89a99, 0 2px 12px #29d89a55,
+    0 0 30px rgba(41, 216, 154, 0.4) !important;
+}
