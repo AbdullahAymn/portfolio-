@@ -1,0 +1,197 @@
+{
+  "projects": [
+    {
+      "id": "i-fish",
+      "title": "I Fish – ERP System",
+      "status": "Completed",
+      "thumbnail": "/projects/I-fish/ifish-thumb.jpg",
+      "shortDescription": "A full ERP system for fishing vessel operations, reporting, dashboards, and management.",
+      "seoDescription": "I Fish ERP System – Full operational dashboards, reporting, management tools built with React.",
+      "description": "Developed the complete front‑end of a large‑scale ERP system for fishing vessels, employee tracking, and operational management. Built dashboards, reporting modules with PDF/Excel export, and highly optimized responsive layouts.",
+      "contributions": [
+        "Complete UI architecture using React & Tailwind",
+        "Operational dashboards with vessel & employee tracking",
+        "Advanced reporting with PDF & Excel export",
+        "Interactive charts and analytics",
+        "Fully responsive layouts optimized for all devices"
+      ],
+      "tech": [
+        "React",
+        "TailwindCSS",
+        "Charts.js",
+        "PDF Export",
+        "Excel Export"
+      ],
+      "screenshots": [
+        "/projects/I-fish/ifish-1.jpg",
+        "/projects/I-fish/ifish-2.jpg"
+      ],
+      "link": null,
+      "demo": "https://i-fish.vercel.app/"
+    },
+    {
+      "id": "mitra-farm",
+      "title": "Mitra Farm Platform",
+      "status": "Discontinued",
+      "thumbnail": "/projects/mitra-farm/mitra-farm-thumb.jpg",
+      "shortDescription": "A multi-role agricultural service platform for farms, engineers, technicians, and customers.",
+      "seoDescription": "Mitra Farm – Saudi-based agricultural service and product platform for farms, engineers, and customers.",
+      "description": "Front‑end development for a large-scale agricultural ecosystem in Saudi Arabia. The system connected farms, engineers, technicians, and customers into one marketplace with dashboards and management tools.",
+      "contributions": [
+        "Role-based dashboards for farmers, customers, and service providers",
+        "Product & service marketplace UI",
+        "Customer–service provider request flows",
+        "Admin management dashboards",
+        "Mobile-first responsive design"
+      ],
+      "tech": ["React", "TailwindCSS", "REST APIs", "Charts.js", "Swiper js"],
+      "screenshots": [
+        "/projects/mitra-farm/mitra-farm-1.jpg",
+        "/projects/mitra-farm/mitra-farm-2.jpg",
+        "/projects/mitra-farm/mitra-farm-3.jpg",
+        "/projects/mitra-farm/mitra-farm-4.jpg"
+      ],
+      "link": "http://mitrafarm.com/",
+      "demo": "https://farm-eight-neon.vercel.app/"
+    },
+    {
+      "id": "mitra-camel",
+      "title": "Mitra Camel Platform",
+      "status": "Discontinued",
+      "thumbnail": "/projects/mitra-camel/mitra-camel-thumb.webp",
+      "shortDescription": "A camel-focused platform offering services, veterinary workflows, and event management.",
+      "seoDescription": "Mitra Camel – Camel service marketplace with veterinary features and event/race management.",
+      "description": "A platform specialized for camel owners. Included veterinary service requests, event/race management, products, and admin tools.",
+      "contributions": [
+        "Camel services & marketplace UI",
+        "Veterinary workflow pages",
+        "Race & event management UI",
+        "Admin dashboards for users, health records, and events"
+      ],
+      "tech": ["React", "TailwindCSS", "REST APIs", "Charts.js", "Swiper js"],
+      "screenshots": [
+        "/projects/mitra-camel/mitra-camel-1.webp",
+        "/projects/mitra-camel/mitra-camel-2.webp",
+        "/projects/mitra-camel/mitra-camel-3.webp",
+        "/projects/mitra-camel/mitra-camel-4.webp"
+      ],
+      "link": "https://mitracamel.com/",
+      "demo": "https://camels-seven.vercel.app/"
+    },
+    {
+      "id": "vay-pocket",
+      "title": "Vay Pocket Management System",
+      "status": "Completed",
+      "thumbnail": "/projects/vaypocket/vaypocket-thumb.jpg",
+      "shortDescription": "Multi-role company/employee management system with dashboards and reporting.",
+      "seoDescription": "Vay Pocket – Role-based company and employee management system with reporting and dashboards.",
+      "description": "Developed a complete front-end system supporting Admin, Manager, Employee, and HR roles with advanced reporting, dashboards, and access control.",
+      "contributions": [
+        "Role-based UI & access control",
+        "Dynamic analytics dashboards",
+        "PDF & Excel exportable reports",
+        "Responsive data tables & forms",
+        "High-performance architecture"
+      ],
+      "tech": ["React", "TailwindCSS", "Charts.js"],
+      "screenshots": [
+        "/projects/vaypocket/vp-1.jpg",
+        "/projects/vaypocket/vp-2.jpg",
+        "/projects/vaypocket/vp-3.jpg",
+        "/projects/vaypocket/vp-4.jpg"
+      ],
+      "link": null,
+      "demo": "https://pettycash-eight.vercel.app/"
+    },
+
+    {
+      "id": "zekra-academy",
+      "title": "Zekra Academy Website",
+      "status": "Completed",
+      "thumbnail": "/projects/zekra/zekra-thumb.jpg",
+      "shortDescription": "Figma-to-code conversion for an academy website offering Arabic & Quran services.",
+      "seoDescription": "Zekra Academy – Portfolio website for Arabic learning and Quran services.",
+      "description": "Converted full Figma UI into a responsive and animated website for an academy offering Arabic teaching and Quran services.",
+      "contributions": [
+        "Pixel-perfect Figma to web",
+        "Responsive sections & layout",
+        "Modern clean UI animations"
+      ],
+      "tech": ["Next.js", "TailwindCSS"],
+      "screenshots": [
+        "/projects/zekra/zekra-1.jpg",
+        "/projects/zekra/zekra-2.jpg",
+        "/projects/zekra/zekra-3.jpg",
+        "/projects/zekra/zekra-4.png"
+      ],
+      "link": "https://zekra-academy.vercel.app/",
+      "demo": "https://zekra-academy.vercel.app/"
+    },
+    {
+      "id": "hurghada-avenue",
+      "title": "Hurghada Avenue",
+      "status": "Completed",
+      "thumbnail": "/projects/hurghada/hurghada-thumb.webp",
+      "shortDescription": "Corporate portfolio website showcasing projects and company identity.",
+      "seoDescription": "Hurghada Avenue – Corporate portfolio website built with responsive modern UI.",
+      "description": "Developed the company portfolio website with a clean modern UI, responsive sections, and smooth animations.",
+      "contributions": [
+        "Responsive corporate layout",
+        "Project highlights & sections",
+        "Performance optimization"
+      ],
+      "tech": ["Next.js", "TailwindCSS"],
+      "screenshots": [
+        "/projects/hurghada/hurghada-1.jpg",
+        "/projects/hurghada/hurghada-2.jpg",
+        "/projects/hurghada/hurghada-3.jpg"
+      ],
+      "link": "https://hurghada-avenue.vercel.app/",
+      "demo": "https://hurghada-avenue.vercel.app/"
+    },
+    {
+      "id": "zahrat-elsalam",
+      "title": "Zahrat El Salam",
+      "status": "Completed",
+      "thumbnail": "/projects/zahrat/zahrat-thumb.jpg",
+      "shortDescription": "Portfolio website with full admin dashboard.",
+      "seoDescription": "Zahrat El Salam – Portfolio website with full admin dashboard.",
+      "description": "Built a responsive portfolio website for a company along with a complete admin control dashboard for managing content.",
+      "contributions": [
+        "Full responsive website",
+        "Content management dashboard",
+        "Brand-focused UI"
+      ],
+      "tech": ["Next.js", "TailwindCSS"],
+      "screenshots": [
+        "/projects/zahrat/zahrat-thumb.jpg",
+        "/projects/zahrat/zahrat-1.jpg",
+        "/projects/zahrat/zahrat-4.jpg",
+        "/projects/zahrat/zahrat-22.jpg",
+        "/projects/zahrat/zahrat-3.jpg"
+      ],
+      "link": "https://zahratelsalam.com/",
+      "demo": "https://el-salam-furn.vercel.app/"
+    },
+    {
+      "id": "bio-geniuses",
+      "title": "Bio Geniuses — Education Platform",
+      "status": "Completed",
+      "thumbnail": "/projects/bio/bio-thumb.jpg",
+      "shortDescription": "Education platform with dashboards, reporting, course uploads, and payments.",
+      "seoDescription": "Bio Geniuses – Modern education platform with analytics, course management, and payment integration.",
+      "description": "Worked on core modules of a modern education platform including course uploads, instructor/admin dashboards, reporting, analytics, and payment integration.",
+      "contributions": [
+        "Admin & instructor dashboards",
+        "Reporting & analytics pages",
+        "Course upload & management",
+        "Student profile page",
+        "Payment gateway integration"
+      ],
+      "tech": ["React", "TailwindCSS", "REST APIs"],
+      "screenshots": [],
+      "link": null,
+      "demo": "https://platform-blush-mu.vercel.app/"
+    }
+  ]
+}

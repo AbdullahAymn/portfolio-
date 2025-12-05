@@ -2,6 +2,37 @@ import Hire from "@/components/Hire";
 import IconComponents from "@/components/IconComponents";
 import { Sparkle } from "lucide-react";
 import WorkJourney from "./WorkJourney";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Me | Abdullah Ayman – Front-End Developer",
+  description:
+    "Learn more about Abdullah Ayman, a Front-End Developer specialized in React & Next.js. I build fast, scalable, and SEO-focused web apps for startups and businesses.",
+  keywords: [
+    "about Abdullah Ayman",
+    "front-end developer",
+    "React developer",
+    "Next.js developer",
+    "web developer Egypt",
+    "software engineer portfolio",
+  ],
+  openGraph: {
+    title: "About Abdullah Ayman – Front-End Developer",
+    description:
+      "Front-End Developer with experience building high-performance web apps using React & Next.js.",
+    type: "profile",
+    url: "https://portfolio-abdullahaymn.vercel.app/about",
+    images: ["/Abdullah-vector.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Me – Abdullah Ayman",
+    description:
+      "Front-End Developer specialized in React & Next.js. Learn more about my journey and experience.",
+    images: ["/Abdullah-vector.png"],
+  },
+  robots: { index: true, follow: true },
+};
 
 export default function AboutPage() {
   // Feature cards data
