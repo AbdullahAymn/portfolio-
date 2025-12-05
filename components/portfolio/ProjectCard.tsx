@@ -23,7 +23,7 @@ export default function ProjectCard({ project }: { project: IProject }) {
         <h2 className="text-xl font-semibold mb-2">{project.title}</h2>
         <p className="text-sm text-white/70 mb-4">{project.shortDescription}</p>
       </div>
-      <div className="flex items-center justify-between mt-4 px-12">
+      <div className="flex items-center !justify-center mt-4 gap-6">
         <Link
           href={`/portfolio/${project.id}`}
           className="group relative w-10 h-10 rounded-full flex items-center !justify-center bg-blue-400/40 border border-blue-200/20 backdrop-blur-lg overflow-hidden transition-all duration-300 hover:w-34"
