@@ -26,10 +26,10 @@ export default function ProjectCard({ project }: { project: IProject }) {
       <div className="flex items-center !justify-center mt-4 gap-6">
         <Link
           href={`/portfolio/${project.id}`}
-          className="group relative w-10 h-10 rounded-full flex items-center !justify-center bg-blue-400/40 border border-blue-200/20 backdrop-blur-lg overflow-hidden transition-all duration-300 hover:w-34"
+          className="group relative w-34 h-10 rounded-full flex items-center !justify-center bg-blue-400/40 border border-blue-200/20 backdrop-blur-lg overflow-hidden transition-all duration-300"
         >
-          <span className="flex items-center justify-center group-hover:gap-3 gap-0 transition-all duration-300">
-            <span className="opacity-0 ml-0 max-w-0 overflow-hidden group-hover:opacity-100 group-hover:ml-3 group-hover:max-w-xs transition-all duration-300 whitespace-nowrap text-sm">
+          <span className="flex items-center justify-center gap-3  transition-all duration-300">
+            <span className="overflow-hidden opacity-100 ml-3 max-w-xs transition-all duration-300 whitespace-nowrap text-sm">
               More Details
             </span>
             <ArrowRightIcon className="w-5 h-5 transition-all duration-300" />

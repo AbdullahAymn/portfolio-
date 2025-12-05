@@ -2,7 +2,7 @@ import Card from "@/components/Card";
 import Image from "next/image";
 import profile from "@/assets/images/abdullah.webp";
 import Hire from "@/components/Hire";
-import ContactForm from "@/components/ContactForm";
+import ContactForm from "@/components/contact/ContactForm";
 
 export default function Home() {
   return (
