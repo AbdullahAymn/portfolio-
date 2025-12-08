@@ -6,6 +6,33 @@ import { usePathname } from "next/navigation";
 import { FaFacebook, FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import TextPressure from "../TextPressure";
 
+const LINKS = [
+  { link: "/", name: "Home" },
+  { link: "/about", name: "About" },
+  // { link: "/services", name: "Services" },
+  { link: "/portfolio", name: "Portfolio" },
+  { link: "/contact", name: "Contact" },
+];
+
+export const SOCIAL_LINKS = [
+  {
+    icon: FaGithub,
+    href: "https://github.com/AbdullahAymn",
+    label: "GitHub",
+  },
+  {
+    icon: FaLinkedin,
+    href: "https://www.linkedin.com/in/aabdullah-ayyman/",
+    label: "LinkedIn",
+  },
+  {
+    icon: FaFacebook,
+    href: "https://www.facebook.com/Abdullah.Ayman.Yehya",
+    label: "Facebook",
+  },
+  { icon: FaXTwitter, href: "https://x.com/Aybbekk", label: "X (Twitter)" },
+];
+
 export default function NavBar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileView, setIsMobileView] = useState(false);
@@ -26,32 +53,7 @@ export default function NavBar() {
   }, []);
   const pathname = usePathname();
 
-  const LINKS = [
-    { link: "/", name: "Home" },
-    { link: "/about", name: "About" },
-    // { link: "/services", name: "Services" },
-    { link: "/portfolio", name: "Portfolio" },
-    { link: "/contact", name: "Contact" },
-  ];
-
-  const SOCIAL_LINKS = [
-    {
-      icon: FaGithub,
-      href: "https://github.com/AbdullahAymn",
-      label: "GitHub",
-    },
-    {
-      icon: FaLinkedin,
-      href: "https://www.linkedin.com/in/aabdullah-ayyman/",
-      label: "LinkedIn",
-    },
-    {
-      icon: FaFacebook,
-      href: "https://www.facebook.com/Abdullah.Ayman.Yehya",
-      label: "Facebook",
-    },
-    { icon: FaXTwitter, href: "https://x.com/Aybbekk", label: "X (Twitter)" },
-  ];
+ 
 
   return (
     <header className={`w-full px-2 sticky top-0 z-[9999] `}>

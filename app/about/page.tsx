@@ -3,9 +3,10 @@ import IconComponents from "@/components/IconComponents";
 import { Sparkle } from "lucide-react";
 import WorkJourney from "./WorkJourney";
 import { Metadata } from "next";
+import PageTitle from "@/components/PageTitle";
 
 export const metadata: Metadata = {
-  title: "About Me | Abdullah Ayman – Front-End Developer",
+  title: "About Me | Abdullah Ayman",
   description:
     "Learn more about Abdullah Ayman, a Front-End Developer specialized in React & Next.js. I build fast, scalable, and SEO-focused web apps for startups and businesses.",
   keywords: [
@@ -95,7 +96,10 @@ export default function AboutPage() {
 
   return (
     <div>
-      <h1 className="text-center text-4xl my-12 font-bold">About Me</h1>
+      <PageTitle
+        title="About Me"
+        desc="Curious about who I am? Let’s get to know me better!"
+      />
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-start">
         {/* Icons Section */}
         <section className="flex justify-center lg:justify-start lg:sticky top-22">

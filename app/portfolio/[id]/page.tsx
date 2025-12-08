@@ -30,19 +30,19 @@ export default async function ProjectDetails({
     return <div className="text-center text-white p-10">Project not found</div>;
 
   return (
-    <div className="min-h-screen p-10 bg-gradient-to-b from-black to-gray-900 text-white">
+    <div className="min-h-screen px-2 md:px-4 lg:px-10 py-10 bg-gradient-to-b from-black to-gray-900 text-white">
       <div className="max-w-4xl mx-auto">
-        <div className="backdrop-blur-2xl bg-white/10 border border-white/20 rounded-3xl p-10 shadow-2xl">
+        <div className="backdrop-blur-2xl bg-white/10 border border-white/20 rounded-3xl px-4 md:px-6 lg:px-10 py-10 shadow-2xl">
           <div className="flex justify-between items-center gap-4 mb-4">
-            <h1 className="text-4xl font-bold flex-1 ">{project.title}</h1>
+            <h1 className="text-2xl md:text-4xl font-bold flex-1 ">{project.title}</h1>
 
             {hasLink && (
-              <section className="w-34 flex !justify-end">
+              <section className="md:w-34  flex !justify-end">
                 <a
                   href={gtHref || "/"}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group relative w-10 h-10 rounded-full flex items-center !justify-center bg-emerald-300/50 border border-emerald-200/20 backdrop-blur-lg overflow-hidden transition-all duration-300 hover:w-34"
+                  className="group relative w-10 h-10 rounded-full flex items-center !justify-center bg-emerald-300/50 border border-emerald-200/20 backdrop-blur-lg overflow-hidden transition-all duration-300 md:hover:w-34"
                 >
                   <span className="flex items-center justify-center group-hover:gap-3 gap-0 transition-all duration-300">
                     <span className="opacity-0 ml-0 max-w-0 overflow-hidden group-hover:opacity-100 group-hover:ml-3 group-hover:max-w-xs transition-all duration-300 whitespace-nowrap text-sm">

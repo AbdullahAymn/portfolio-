@@ -4,6 +4,8 @@ import Card from "../Card";
 import { Loader, Mail, MapPin, Phone, Send } from "lucide-react";
 import Label from "./Label";
 import Sent from "./Sent";
+import InfoLabel from "./InfoCard";
+import { SOCIAL_LINKS } from "../layout/Header";
 
 type error = {
   name?: string;
@@ -73,7 +75,6 @@ export default function ContactForm() {
     }
   };
 
-
   const closePopup = () => {
     setSent(false);
   };
@@ -81,31 +82,58 @@ export default function ContactForm() {
     <Card>
       <div className="flex flex-wrap gap-4">
         {/* Contact Side Section */}
-        <div className="flex flex-col justify-between gap-2 w-full md:max-w-[400px]">
-          <section
+        <div className="flex flex-col justify-between gap-2 w-full md:max-w-[400px] overflow-hidden">
+          <InfoLabel
             onClick={() =>
               window.open("mailto:abdullahayman40474@gmail.com", "_blank")
             }
             title="Send Email"
-            className="cursor-pointer p-4 rounded-2xl shadow-2xl shadow-white/10 border text-white flex items-center !justify-start gap-2"
-          >
-            <Mail size={36} className="text-[#26a77d]" />
-            <p className="text-xl"> abdullahayman40474@gmail.com</p>
-          </section>
-          <section
+            value={"abdullahayman40474@gmail.com"}
+            icon={Mail}
+          />
+          <InfoLabel
             onClick={() => window.open("tel:+201015737609")}
             title="Call"
-            className="cursor-pointer p-4 rounded-2xl shadow-2xl shadow-white/10 border text-white flex items-center !justify-start gap-2"
-          >
-            <Phone size={36} className="text-[#26a77d]" />
-            <p className="text-xl"> +20 101 573 7609</p>
-          </section>
-          <section
-            title="Address"
-            className="cursor-pointer p-4 rounded-2xl shadow-2xl shadow-white/10 border text-white flex items-center !justify-start gap-2"
-          >
-            <MapPin size={36} className="text-[#26a77d]" />
-            <p className="text-xl">Egypt</p>
+            value={"+20 101 573 7609"}
+            icon={Phone}
+          />
+          <InfoLabel title="Address" value={"Egypt"} icon={MapPin} />
+
+          <section className="p-4 rounded-2xl shadow-2xl shadow-white/10 border flex items-center !justify-center gap-6">
+            {SOCIAL_LINKS.map((social) => {
+              const Icon = social.icon;
+              return (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.label}
+                  className="relative text-foreground/80 hover:text-white transition-all duration-500 p-2 rounded-full overflow-hidden"
+                >
+                  <div
+                    className="absolute inset-0 rounded-full bg-gray-800/60 backdrop-blur-xl border border-gray-700/40 shadow-2xl shadow-black/30 scale-100"
+                    style={{
+                      background:
+                        "linear-gradient(135deg, rgba(30,30,30,0.7) 60%, rgba(30,30,30,0.4) 100%)",
+                      boxShadow:
+                        "0 6px 24px 2px rgba(30,30,30,0.6), 0 2px 10px 1px rgba(90,90,120,0.16), inset 0 1px 0 rgba(255,255,255,0.08)",
+                      transform:
+                        "perspective(600px) rotateX(7deg) translateZ(8px)",
+                    }}
+                  />
+                  <div
+                    className="absolute inset-0 rounded-full pointer-events-none"
+                    style={{
+                      background:
+                        "linear-gradient(135deg, rgba(255,255,255,0.10) 15%, rgba(255,255,255,0.03) 50%, transparent 80%)",
+                      mixBlendMode: "soft-light",
+                    }}
+                  />
+                  <Icon className="w-5 h-5 relative z-10 transition-transform duration-500" />
+                </a>
+              );
+            })}
           </section>
         </div>
 
@@ -170,7 +198,7 @@ export default function ContactForm() {
               type="submit"
               className="md:col-span-2 hover:bg-[#26a77d] transition-all ease-in-out duration-300
                cursor-pointer p-4 rounded-2xl shadow-2xl shadow-white/10 border-2 text-white 
-               flex items-center !justify-center gap-4 text-xl"
+               flex items-center !justify-center gap-4 md:text-xl"
             >
               {loading ? (
                 <>

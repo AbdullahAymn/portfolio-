@@ -1,9 +1,10 @@
 import ProjectCard from "@/components/portfolio/ProjectCard";
 import { projects } from "./portfolio.json";
 import { Metadata } from "next";
+import PageTitle from "@/components/PageTitle";
 
 export const metadata: Metadata = {
-  title: "Projects | Abdullah Ayman – Web Developer Portfolio",
+  title: "Projects | Abdullah Ayman",
   description:
     "Explore my portfolio of real-world projects built with React, Next.js, and modern web technologies. Fast, scalable, and production-ready applications.",
   keywords: [
@@ -36,16 +37,12 @@ export const metadata: Metadata = {
 export default function page() {
   return (
     <div>
-      <div className="text-center my-4">
-        <h1 className="text-5xl sm:text-6xl font-extrabold bg-gradient-to-r from-blue-300 via-emerald-300 to-blue-400 bg-clip-text text-transparent drop-shadow-lg mb-4">
-          My Projects Portfolio
-        </h1>
-        <p className="max-w-xl mx-auto text-lg text-white/80 font-light mt-2">
-          Explore a curated collection of web applications and real-world projects built with React, Next.js, and modern technologies. <br className="hidden sm:inline" />
-          Fast, scalable, crafted with best practices and care.
-        </p>
-      </div>
-      <div className="min-h-screen p-10 bg-gradient-to-b from-black to-gray-900 text-white">
+      <PageTitle
+        title="My Projects Portfolio"
+        desc="Explore a curated collection of web applications and real-world projects built with React, Next.js, and modern technologies. Fast, scalable, and crafted with best practices and care."
+      />
+
+      <div className="min-h-screen px-2 md:px-4 lg:px-10 bg-gradient-to-b from-black to-gray-900 text-white">
         <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />
