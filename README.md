@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Abdullah Ayman — Personal Portfolio
+
+This repository is the source for the personal portfolio website of Abdullah Ayman. It's a modern, fast, and responsive portfolio built with Next.js and Tailwind CSS to showcase projects, experience, and contact information.
+
+## Key Features
+
+- Clean, responsive UI with glassmorphism and motion effects
+- Built with Next.js (App Router) and React + TypeScript
+- Styled with Tailwind CSS and custom global styles
+- Modular components in `components/` for easy reuse
+- Projects stored under `app/portfolio` and `public/projects/`
+- Contact form API at `app/api/contact/route.js`
+
+## Tech Stack
+
+- Next.js (React)
+- TypeScript
+- Tailwind CSS
+- Lucide / react-icons for icons
+- PostCSS (project includes `postcss.config.mjs`)
+
+## Project Structure (important paths)
+
+- `app/` — Next.js App Router pages and layout
+	- `app/page.tsx` — Home page
+	- `app/about/page.tsx` — About page
+	- `app/portfolio/` — Portfolio listing + JSON data
+	- `app/contact/page.tsx` — Contact page
+	- `app/api/contact/route.js` — Contact form API route
+- `components/` — Reusable UI components (Header, Footer, Cards, etc.)
+- `components/layout/Header.tsx` — Main site navigation and social links
+- `assets/`, `public/projects/` — Images and project assets
+- `interfaces/` — TypeScript interfaces (e.g., `portfolio.ts`)
+- `lib/` — Utility helpers
 
 ## Getting Started
 
-First, run the development server:
+Prerequisites:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Node.js 18+ (recommended)
+- npm, pnpm, or yarn
+
+Install dependencies:
+
+```powershell
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Run the development server:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```powershell
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open your browser at `http://localhost:3000`.
 
-## Learn More
+Build for production:
 
-To learn more about Next.js, take a look at the following resources:
+```powershell
+npm run build
+npm run start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Linting (if configured):
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```powershell
+npm run lint
+```
 
-## Deploy on Vercel
+## Adding / Editing Projects
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Project data is stored in `app/portfolio/portfolio.json` (used to render the portfolio list).
+- Images for projects live in `public/projects/<project-folder>/` — add images there and update `portfolio.json` accordingly.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Contact Form
+
+- The contact form posts to `app/api/contact/route.js`. 
+
+## Author & Contact
+
+- Abdullah Ayman — Front-End Developer
+- LinkedIn: [https://www.linkedin.com/in/aabdullah-ayyman/](https://www.linkedin.com/in/aabdullah-ayyman/)
+
